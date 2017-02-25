@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="UniversalAppCommandSet_en-us">
+    <CommandPrefix> please </CommandPrefix>
+    <Example>  please turn the light on? </Example>
+
+    <Command Name="officelighton">
+      <Example>  can you Turn the office light on.  </Example>
+      <ListenFor > [can you] turn [the] [my] office light on </ListenFor>
+      <Feedback> Turning the office light on </Feedback>
+      <Navigate/>
+    </Command>
+
+    <Command Name="officelightoff">
+      <Example>  can you Turn the office light off.  </Example>
+      <ListenFor >[can you] turn [the] [my] office light off </ListenFor>
+      <Feedback> Turning the office light off </Feedback>
+      <Navigate/>
+    </Command>
+
+
+    <Command Name="mainlighton">
+      <Example>  can you Turn the main light on.  </Example>
+      <ListenFor > [can you] [turn] [the] [my] main light on </ListenFor>
+      <Feedback> Turning the main light on </Feedback>
+      <Navigate/>
+    </Command>
+
+    <Command Name="mainlightoff">
+      <Example>  can you Turn the main light off.  </Example>
+      <ListenFor >[can you] [turn] [the] [my] main light off </ListenFor>
+      <Feedback> Turning the main light off </Feedback>
+      <Navigate/>
+    </Command>
+
+
+    <Command Name="readinglighton">
+      <Example>  can you Turn the reading light on.  </Example>
+      <ListenFor > [can you] turn [the] [my] reading light on </ListenFor>
+      <Feedback> Turning the reading light on </Feedback>
+      <Navigate/>
+    </Command>
+
+    <Command Name="readinglightoff">
+      <Example>  can you Turn the reading light off.  </Example>
+      <ListenFor >[can you] turn [the] [my] reading light off </ListenFor>
+      <Feedback> Turning the reading light off </Feedback>
+      <Navigate/>
+    </Command>
+    
+    
+    <Command Name="officedeviceson">
+      <Example>  can you Turn the office on.  </Example>
+      <ListenFor > [can you] turn [the] [my] office on </ListenFor>
+      <Feedback> Turning the office on </Feedback>
+      <Navigate/>
+    </Command>
+
+   <Command Name="officedevicesoff">
+      <Example>  can you Turn the office off.  </Example>
+      <ListenFor > [can you] turn [the] [my] office off </ListenFor>
+      <Feedback> Turning the office off</Feedback>
+      <Navigate/>
+    </Command>
+    
+    
+      <Command Name="opendoor">
+      <Example>  can you open the door.  </Example>
+      <ListenFor > [can you] open [the] [my] door </ListenFor>
+      <Feedback> opening the door </Feedback>
+      <Navigate/>
+    </Command>
+
+     <Command Name="closedoor">
+      <Example>  can you close the door.  </Example>
+      <ListenFor > [can you] close [the] [my] door </ListenFor>
+      <Feedback> closing the door</Feedback>
+      <Navigate/>
+    </Command>
+    
+  
+    <Command Name="ledstripon">
+      <Example> can you Turn the ledstrip on in color normal </Example>
+      <ListenFor > [can you] [turn] [the] [my] LED on [in] [color] [normal]</ListenFor>
+      <Feedback> Turining the ledstrip on in color normal </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="ledstriponblue">
+      <Example> can you Turn the ledstrip on in color blue </Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] blue</ListenFor>
+      <Feedback> Turining the ledstrip on in color blue </Feedback>
+      <Navigate/>
+    </Command>
+  
+     
+    <Command Name="ledstriponred">
+      <Example> can you Turn the ledstrip on in LED color red </Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] red</ListenFor>
+      <Feedback> Turining the ledstrip on in color red </Feedback>
+      <Navigate/>
+    </Command>
+  
+ 
+    <Command Name="ledstripongreen">
+      <Example> can you Turn the ledstrip on in color green</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] green</ListenFor>
+      <Feedback> Turining the ledstrip on in color green </Feedback>
+      <Navigate/>
+    </Command>
+  
+       <Command Name="ledstriponyellow">
+      <Example> can you Turn the ledstrip on in color yellow</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] yellow</ListenFor>
+      <Feedback> Turining the ledstrip on in color yellow </Feedback>
+      <Navigate/>
+    </Command>
+      
+       <Command Name="ledstriponcyan">
+      <Example> can you Turn the ledstrip on in color cyan</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] cyan</ListenFor>
+      <Feedback> Turining the ledstrip on in color cyan </Feedback>
+      <Navigate/>
+    </Command>
+      
+      <Command Name="ledstriponorange">
+      <Example> can you Turn the ledstrip on in color orange</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] orange</ListenFor>
+      <Feedback> Turining the ledstrip on in color orange </Feedback>
+      <Navigate/>
+    </Command>
+    
+      <Command Name="ledstriponpink">
+      <Example> can you Turn the ledstrip on in color pink</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] pink</ListenFor>
+      <Feedback> Turining the ledstrip on in color pink </Feedback>
+      <Navigate/>
+    </Command>
+    
+      <Command Name="ledstriponpurple">
+      <Example> can you Turn the ledstrip on in color purple</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] purple</ListenFor>
+      <Feedback> Turining the ledstrip on in color purple </Feedback>
+      <Navigate/>
+    </Command>
+    
+      
+    <Command Name="ledstriponfade">
+      <Example> can you Turn the ledstrip on in fade</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED [on] [in] [color] fade</ListenFor>
+      <Feedback> Turining the ledstrip on in fade </Feedback>
+      <Navigate/>
+    </Command>
+  
+    <Command Name="ledstripoff">
+      <Example> can you Turn the ledstrip off</Example>
+      <ListenFor > [can you] [turn] [the] [my] LED off </ListenFor>
+      <Feedback> Turining the ledstrip off </Feedback>
+      <Navigate/>
+    </Command>
+  
+    
+     <Command Name="allon">
+      <Example>  turn all on  </Example>
+      <ListenFor > [can you] [turn] [all] [the] [my] on </ListenFor>
+      <Feedback> turning all on </Feedback>
+      <Navigate/>
+    </Command>
+
+     <Command Name="alloff">
+      <Example>  turn all off  </Example>
+      <ListenFor > [can you] [turn] [all] [the] [my] off </ListenFor>
+      <Feedback> turning all off </Feedback>
+      <Navigate/>
+    </Command>
+  
+  
+  </CommandSet>
+</VoiceCommands>
