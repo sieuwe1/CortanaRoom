@@ -24,4 +24,4 @@ use the build in alarm clock to turn your rgb ledstrip into an wake up light
 
 **schematic**
 
-![alt text](CortanaRoom/20170223_224139.jpg "The schematic. For more explenation see the Instructable.")
+![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/20170223_224139.jpg)
