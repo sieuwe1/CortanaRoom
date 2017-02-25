@@ -25,3 +25,13 @@ Use the build in alarm clock to turn your RGB ledstrip into an wake up light
 ###schematic
 
 ![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/20170223_224139.jpg)
+
+
+###Short explenation about what is here.
+
+First off all you can see 2 folders. 
+
+In the folder called compiled are two already compiled versions of cortana room. Version 1 is for original arduino's or very good clone's and version 2 is for fake arduino's with the ch340 usb chip. To run one of these versions you first have to open the **Add-AppDevPackage.ps1** with the windows powershell. After following the onscreen instructions you are ready to go. To find it just type in windows search CortanaRoom.
+
+In the folder called project is the intire visual studio project. To open it download and install visual studio 2015 and the microsoft remote arduino libarary. 
+
