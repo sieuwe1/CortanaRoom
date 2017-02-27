@@ -1,12 +1,16 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
+###A video on some of CortanaRoom's functions
+
+https://www.youtube.com/watch?v=bN5MxCF-QB8
+
 ###What is CortanaRoom?
 
 CortanaRoom is an open source project to use cortana  to control your electronics by voice. This is done by an application which can be downloaded from my Github and an arduino with StandardFirmata code on it. CortanaRoom is still under development by me right now. This means that there will be more features in the future. This also means that the application may have some bugs in it. Please report them as an issue on my github page so that i can fix them!
 
 ###If you want to use CortanaRoom for yourself check out my instructable.
 
-####instructable coming soon
+https://www.instructables.com/id/Use-Cortana-and-a-Arduino-for-Home-Automation-to-C/
 
 ###Features
 
