@@ -20,11 +20,11 @@ Turn on or off an outlet box with your voice
 
 Use your voice to lock or unlock your room (complete support will come later)
 
-Turn an RGB ledstrip into diffrent colors with your voice
-
-Turn an RGB ledstrip into a fading effect with your voice
+Turn an rgb ledstrip into diffrent colors with your voice turn an rgb ledstrip into a fading effect with your voice
 
 Use the build in alarm clock to turn your RGB ledstrip into an wake up light
+
+Support for multiple command sorts. For example you can say "turn LED blue" or you can say "can you turn my LED on in color blue".
 
 ###schematic
 
