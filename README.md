@@ -4,6 +4,8 @@
 
 https://www.youtube.com/watch?v=bN5MxCF-QB8
 
+###1-3-2017 There are problems with the Alarm clock function wich will make the clock not go off. Please also use a regular alarm if you want to use this function. I am working on solving the problem and will push a update when it is fixed!
+
 ###What is CortanaRoom?
 
 CortanaRoom is an open source project to use cortana  to control your electronics by voice. This is done by an application which can be downloaded from my Github and an arduino with StandardFirmata code on it. CortanaRoom is still under development by me right now. This means that there will be more features in the future. This also means that the application may have some bugs in it. Please report them as an issue on my github page so that i can fix them!
