@@ -1,20 +1,20 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
-###A video on some of CortanaRoom's functions
+### A video on some of CortanaRoom's functions
 
 https://www.youtube.com/watch?v=bN5MxCF-QB8
 
-###1-3-2017 There are problems with the Alarm clock function wich will make the clock not go off. Please also use a regular alarm if you want to use this function. I am working on solving the problem and will push a update when it is fixed!
+### 1-3-2017 There are problems with the Alarm clock function wich will make the clock not go off. Please also use a regular alarm if you want to use this function. I am working on solving the problem and will push a update when it is fixed!
 
-###What is CortanaRoom?
+### What is CortanaRoom?
 
 CortanaRoom is an open source project to use cortana  to control your electronics by voice. This is done by an application which can be downloaded from my Github and an arduino with StandardFirmata code on it. CortanaRoom is still under development by me right now. This means that there will be more features in the future. This also means that the application may have some bugs in it. Please report them as an issue on my github page so that i can fix them!
 
-###If you want to use CortanaRoom for yourself check out my instructable.
+### If you want to use CortanaRoom for yourself check out my instructable.
 
 https://www.instructables.com/id/Use-Cortana-and-a-Arduino-for-Home-Automation-to-C/
 
-###Features
+### Features
 
 Turn on and off 3 different lights with your voice
 
@@ -28,12 +28,12 @@ Use the build in alarm clock to turn your RGB ledstrip into an wake up light
 
 Support for multiple command sorts. For example you can say "turn LED blue" or you can say "can you turn my LED on in color blue".
 
-###schematic
+### schematic
 
 ![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/20170223_224139.jpg)
 
 
-###Short explenation about what is here.
+### Short explenation about what is here.
 
 First off all you can see 2 folders. 
 
