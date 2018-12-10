@@ -1,5 +1,21 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
+### CortanaRoom will be updated with a new gui new functions and a better tutorial soon!
+Check the UML diagram below for a overview of the new app!
+
+![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/UMLCortanaRoom.png)
+
+### ToDo
+Create app
+upload to store
+add heater feauture
+
+### problems
+none
+
+
+# Old
+
 ### A video on some of CortanaRoom's functions
 
 https://www.youtube.com/watch?v=bN5MxCF-QB8
