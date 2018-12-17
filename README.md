@@ -1,5 +1,7 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
+## open in vs 2015 to prevent errors!
+
 ### CortanaRoom will be updated with a new gui new functions and a better tutorial soon. It will also be availible for free in the windows store!
 Here are the new Gui sketches!
 
