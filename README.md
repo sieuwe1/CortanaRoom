@@ -1,31 +1,23 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
-## open in vs 2015 to prevent errors!
 
-### CortanaRoom will be updated with a new gui new functions and a better tutorial soon. It will also be availible for free in the windows store!
-Here are the new Gui sketches!
+## CortanaRoom 2 now availible
+RGB led strip effect support for fade, fade in one color and flash
+Wake up light alarm clock function with RGB Led strip
+Updated GUI
+Complete new settings menu
+remembers settings after shutdown
+Support for a Infrared sensor to turn lights on 
+Soon availible in the windows store
 
-![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/1-Homepage.png)
-![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/2-Help.png)
-![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/3-Settings.png)
+State of CortanRoom 2 is experimental
 
-
-
-
-Check the UML diagram below for a overview of the new app!
-
-![alt tag](https://github.com/sieuwe1/CortanaRoom/blob/master/UMLCortanaRoom.png)
+To use run cortanaroom 2 and go to settings an click the red circle by the connection tab to connect to the arduino. Automatic connecting still has to be added.
 
 
 
-### ToDo
-Create app
-upload to store
-add heater feauture
 
-### problems
-none
-
+## open CortanaRoom 1 in vs 2015 to prevent errors!
 
 # Old
 
