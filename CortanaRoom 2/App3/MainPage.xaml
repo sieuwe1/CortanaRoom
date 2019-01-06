@@ -1,0 +1,125 @@
+﻿<Page
+    x:Class="CoRGB.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoRGB"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="Green" Color="#06D6A0" />
+        <SolidColorBrush x:Key="Red" Color="#EF476F" />
+    </Page.Resources>
+
+    <Grid Background="#FF073B4C" BorderBrush="#FFFECA57" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="164*"/>
+            <RowDefinition Height="557*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="33,33,-13,0" TextWrapping="Wrap" Text="CortanaRoom 2" VerticalAlignment="Top" Height="110" Width="1260" Foreground="#FF2E86DE" FontWeight="Medium" FontSize="72"/>
+        <TextBlock x:Name="LightsTitle" HorizontalAlignment="Left" Margin="53,11.5,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top" Foreground="#FFFF6B6B" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,6.5,0,0" VerticalAlignment="Top" Width="212" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy" HorizontalAlignment="Left" Margin="169,11.5,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,51.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,96.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,141.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="MainLightStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="182,51.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <Border x:Name="ReadingLightStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="182,141.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <Border x:Name="OfficeLightStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="182,96.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy4" HorizontalAlignment="Left" Margin="43,11.5,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy1" HorizontalAlignment="Left" Margin="43,57.5,0,0" TextWrapping="Wrap" Text="Main Light" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy2" HorizontalAlignment="Left" Margin="43,103.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Height="28" Grid.Row="1">
+            <Run Text="Office Light"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <TextBlock x:Name="LightsTitle_Copy3" HorizontalAlignment="Left" Margin="43,148.5,0,0" TextWrapping="Wrap" Text="Readin Light" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Button x:Name="MainLight"  HorizontalAlignment="Left" Margin="182,52.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="MainLight_Click" Grid.Row="1"/>
+        <Button x:Name="OfficeLight"  HorizontalAlignment="Left" Margin="182,96.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="OfficeLight_Click" Grid.Row="1" />
+        <Button x:Name="ReadingLight"  HorizontalAlignment="Left" Margin="182,141.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="ReadingLight_Click" Grid.Row="1" />
+        <TextBlock x:Name="LightsTitle_Copy5" HorizontalAlignment="Left" Margin="301,12.5,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top" Foreground="#FFFF6B6B" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="281,7.5,0,0" VerticalAlignment="Top" Width="212" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy6" HorizontalAlignment="Left" Margin="417,12.5,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="281,52.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="281,97.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="OfficeStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="430,52.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <Border x:Name="TVStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="430,97.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy7" HorizontalAlignment="Left" Margin="291,12.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1">
+            <Run Text="Devices"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <TextBlock x:Name="LightsTitle_Copy8" HorizontalAlignment="Left" Margin="319,57.5,0,0" TextWrapping="Wrap" Text="Office" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy9" HorizontalAlignment="Left" Margin="332,103.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Height="28" Grid.Row="1">
+            <Run Text="TV"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <Button x:Name="OfficeOn"  HorizontalAlignment="Left" Margin="430,53.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="OfficeOn_Click" Grid.Row="1" />
+        <Button x:Name="TVOn"  HorizontalAlignment="Left" Margin="430,97.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="TVOn_Click" Grid.Row="1"  />
+        <TextBlock x:Name="LightsTitle_Copy10" HorizontalAlignment="Left" Margin="548,11.5,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top" Foreground="#FFFF6B6B" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="528,6.5,0,0" VerticalAlignment="Top" Width="367" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy11" HorizontalAlignment="Left" Margin="825,11.5,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="528,51.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="528,96.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="528,141.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="LEDstatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="838,52.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <Border x:Name="FadeOneStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="838,142.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <Border x:Name="FadeStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="838,97.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy12" HorizontalAlignment="Left" Margin="538,11.5,0,0" TextWrapping="Wrap" Text="LEDstrip" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy13" HorizontalAlignment="Left" Margin="565,57.5,0,0" TextWrapping="Wrap" Text="Color" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy14" HorizontalAlignment="Left" Margin="574,101.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Height="28" Text="Fade" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy15" HorizontalAlignment="Left" Margin="555,148.5,0,0" TextWrapping="Wrap" Text="FadeOne" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Button x:Name="LedOn"  HorizontalAlignment="Left" Margin="838,53.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="LedOn_Click" Grid.Row="1"/>
+        <Button x:Name="FadeOn"  HorizontalAlignment="Left" Margin="838,97.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="FadeOn_Click" Grid.Row="1" />
+        <Button x:Name="FadeOneOn"  HorizontalAlignment="Left" Margin="838,142.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="FadeOneOn_Click" Grid.Row="1"  />
+        <TextBox x:Name="LedColor" HorizontalAlignment="Left" Margin="684,52.5,0,0" TextWrapping="Wrap" Text="Type Color" VerticalAlignment="Top" Width="136" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="680,52.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBox x:Name="FadeOneTime" HorizontalAlignment="Left" Margin="684,143.5,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="40" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="680,141.5,0,0" VerticalAlignment="Top" Width="60" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBox x:Name="FadeOneColor" HorizontalAlignment="Left" Margin="751,143.5,0,0" TextWrapping="Wrap" Text="Red" VerticalAlignment="Top" Width="40" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="752,141.5,0,0" VerticalAlignment="Top" Width="60" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="528,186.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="FlashStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="838,187.5,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy16" HorizontalAlignment="Left" Margin="574,193.5,0,0" TextWrapping="Wrap" Text="Flash" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Button x:Name="FlashOn"  HorizontalAlignment="Left" Margin="838,187.5,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Click="FlashOn_Click" Grid.Row="1"  />
+        <TextBox x:Name="FlashTime" HorizontalAlignment="Left" Margin="684,188.5,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="40" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="680,186.5,0,0" VerticalAlignment="Top" Width="60" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBox x:Name="FlashColor" HorizontalAlignment="Left" Margin="751,188.5,0,0" TextWrapping="Wrap" Text="Red" VerticalAlignment="Top" Width="40" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="752,186.5,0,0" VerticalAlignment="Top" Width="60" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBox x:Name="FadeTime" HorizontalAlignment="Left" Margin="684,97.5,0,0" TextWrapping="Wrap" Text="Type Time" VerticalAlignment="Top" Width="136" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.ZIndex="1" FontSize="20" FontWeight="Bold" Foreground="#FF118AB2" Grid.Row="1" />
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="680,97.5,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="589,82,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy23" HorizontalAlignment="Left" Margin="623,89,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="107"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="745,82,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy24" HorizontalAlignment="Left" Margin="790,89,0,0" TextWrapping="Wrap" Text="Help" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="63"/>
+        <Button x:Name="SettingsOn"  HorizontalAlignment="Left" Margin="590,83,0,0" VerticalAlignment="Top" Height="39" Width="137" Opacity="0" Click="SettingsOn_Click" />
+        <Button x:Name="HelpOn"  HorizontalAlignment="Left" Margin="746,82,0,0" VerticalAlignment="Top" Height="39" Width="137" Opacity="0" Click="HelpOn_Click" />
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,192.5,0,0" VerticalAlignment="Top" Width="460" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy17" HorizontalAlignment="Left" Margin="208,199.5,0,0" TextWrapping="Wrap" Text="Turn all off" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="288" Grid.Row="1"/>
+        <Button x:Name="allOff"  HorizontalAlignment="Left" Margin="33,193.5,0,0" VerticalAlignment="Top" Height="39" Width="460" Opacity="0" Click="AllOff_Click" Grid.Row="1" />
+        <TextBlock x:Name="LightsTitle_Copy18" HorizontalAlignment="Left" Margin="53,268,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top" Foreground="#FFFF6B6B" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,263,0,0" VerticalAlignment="Top" Width="212" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy19" HorizontalAlignment="Left" Margin="169,268,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="33,308,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="SensorStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="182,308,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy20" HorizontalAlignment="Left" Margin="43,268,0,0" TextWrapping="Wrap" Text="Sensor" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy21" HorizontalAlignment="Left" Margin="43,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1" Height="29">
+            <Run Text="IR  Sensor"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <TextBlock x:Name="LightsTitle_Copy22" HorizontalAlignment="Left" Margin="301,267,0,0" TextWrapping="Wrap" Text="Lights" VerticalAlignment="Top" Foreground="#FFFF6B6B" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="281,262,0,0" VerticalAlignment="Top" Width="242" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy26" HorizontalAlignment="Left" Margin="305,267,0,0" TextWrapping="Wrap" Text="Alarm" VerticalAlignment="Top"  Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1"/>
+        <TimePicker x:Name="AlarmPicker" HorizontalAlignment="Left" Margin="281,309,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Foreground="#FF118AB2" FontSize="20" FontWeight="Bold" Opacity="1" RequestedTheme="Default" ClockIdentifier="12HourClock" UseLayoutRounding="True" BorderBrush="#FFFFD166" />
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="281,352,0,0" VerticalAlignment="Top" Width="162" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C" Grid.Row="1"/>
+        <Border x:Name="AlarmStatus" BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="465,352,0,0" VerticalAlignment="Top" Width="45" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FFEF476F" Grid.Row="1"/>
+        <TextBlock x:Name="LightsTitle_Copy25" HorizontalAlignment="Left" Margin="314,360,0,0" TextWrapping="Wrap" Text="Start alarm " VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Grid.Row="1" Height="26"/>
+        <Button x:Name="AlarmOn"  HorizontalAlignment="Left" Margin="465,353,0,0" VerticalAlignment="Top" Height="39" Width="45" Opacity="0" Grid.Row="1" Click="AlarmOn_Click"/>
+
+    </Grid>
+</Page>

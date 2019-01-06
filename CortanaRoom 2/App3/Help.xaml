@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="CoRGB.Help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoRGB"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF073B4C" BorderBrush="#FFFECA57">
+
+
+
+
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="589,82,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy3" HorizontalAlignment="Left" Margin="623,89,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="107"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="745,82,0,0" VerticalAlignment="Top" Width="138" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy4" HorizontalAlignment="Left" Margin="790,89,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="63"/>
+        <Button x:Name="SettingsOn1"  HorizontalAlignment="Left" Margin="590,83,0,0" VerticalAlignment="Top" Height="39" Width="137" Opacity="0" Click="SettingsOn_Click" />
+        <Button x:Name="HomeOn1"  HorizontalAlignment="Left" Margin="746,82,0,0" VerticalAlignment="Top" Height="39" Width="137" Opacity="0" Click="HomeOn_Click" />
+        <TextBlock x:Name="Title1" HorizontalAlignment="Left" Margin="29,33,0,0" TextWrapping="Wrap" Text="Help" VerticalAlignment="Top" Height="110" Width="528" Foreground="#FF2E86DE" FontWeight="Medium" FontSize="72"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="37,142,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy5" HorizontalAlignment="Left" Margin="47,148,0,0" TextWrapping="Wrap" Text="Voice Commands" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="331,142,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="40" Margin="621,142,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy6" HorizontalAlignment="Left" Margin="349,148,0,0" TextWrapping="Wrap" Text="App Usage" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519"/>
+        <TextBlock x:Name="LightsTitle_Copy7" HorizontalAlignment="Left" Margin="647,148,0,0" TextWrapping="Wrap" Text="Electronics" VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="328" Margin="35,201,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy" HorizontalAlignment="Left" Margin="61,207,0,0" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper turpis ut sapien imperdiet, at consectetur massa scelerisque. Suspendisse lorem mauris, lacinia vel libero aliquam, accumsan mattis metus. Proin consectetur ex ac vestibulum placerat. Aenean facilisis sapien ac tempor cursus. Integer arcu ipsum, aliquam sit amet euismod sed, suscipit eu lectus. Vestibulum convallis urna eu tincidunt porta. Nulla facilisi. Suspendisse ut lorem ac nisl suscipit gravida eget id ligula. Morbi venenatis egestas leo, sit amet rutrum velit laoreet quis. Sed eget massa sed mi sodales semper." VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="208" Height="296"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="328" Margin="333,201,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <Border BorderBrush="#FFFFD166" BorderThickness="2" HorizontalAlignment="Left" Height="328" Margin="621,201,0,0" VerticalAlignment="Top" Width="262" CornerRadius="20" RenderTransformOrigin="0.627,1.366" Background="#FF073B4C"/>
+        <TextBlock x:Name="LightsTitle_Copy8" HorizontalAlignment="Left" Margin="360,207,0,0" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper turpis ut sapien imperdiet, at consectetur massa scelerisque. Suspendisse lorem mauris, lacinia vel libero aliquam, accumsan mattis metus. Proin consectetur ex ac vestibulum placerat. Aenean facilisis sapien ac tempor cursus. Integer arcu ipsum, aliquam sit amet euismod sed, suscipit eu lectus. Vestibulum convallis urna eu tincidunt porta. Nulla facilisi. Suspendisse ut lorem ac nisl suscipit gravida eget id ligula. Morbi venenatis egestas leo, sit amet rutrum velit laoreet quis. Sed eget massa sed mi sodales semper." VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="208" Height="296"/>
+        <TextBlock x:Name="LightsTitle_Copy1" HorizontalAlignment="Left" Margin="645,207,0,0" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper turpis ut sapien imperdiet, at consectetur massa scelerisque. Suspendisse lorem mauris, lacinia vel libero aliquam, accumsan mattis metus. Proin consectetur ex ac vestibulum placerat. Aenean facilisis sapien ac tempor cursus. Integer arcu ipsum, aliquam sit amet euismod sed, suscipit eu lectus. Vestibulum convallis urna eu tincidunt porta. Nulla facilisi. Suspendisse ut lorem ac nisl suscipit gravida eget id ligula. Morbi venenatis egestas leo, sit amet rutrum velit laoreet quis. Sed eget massa sed mi sodales semper." VerticalAlignment="Top" Foreground="#FF118AB2" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.947,0.519" Width="208" Height="296"/>
+
+
+    </Grid>
+</Page>
