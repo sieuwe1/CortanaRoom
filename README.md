@@ -1,14 +1,13 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
 
-## CortanaRoom 2 now availible
-RGB led strip effect support for fade, fade in one color and flash
-Wake up light alarm clock function with RGB Led strip
-Updated GUI
-Complete new settings menu
-remembers settings after shutdown
-Support for a Infrared sensor to turn lights on 
-Soon availible in the windows store
+## CortanaRoom 2 now availible RGB led strip effect support for fade, fade in one color and flash
+* Wake up light alarm clock function with RGB Led strip
+* Updated GUI
+* Complete new settings menu
+* remembers settings after shutdown
+* Support for a Infrared sensor to turn lights on 
+* Soon availible in the windows store
 
 State of CortanRoom 2 is experimental
 
