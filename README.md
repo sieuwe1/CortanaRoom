@@ -12,14 +12,14 @@
 
 State of CortanRoom 2 Very usable with some small bugs
 
-Commands examples
-Hey Cortana please light my room 		(turns light on)
-Hey Cortana please turn red 			(blue green yellow purple) (switches ledstrip color)
-Hey Cortana please light my desk 		(turns the desk light on)
-Hey Cortana please i am going to sleep		(turns everything off)
-Hey Cortana please i am Awake 			(turns the alarm off and lights on)
-Hey Cortana please start gaming mode 		(turns the TV on and LED strip into red fading effect)
-Hey Cortana please turn my screen on 		(turns the TV on)
+## Commands examples
+* Hey Cortana please light my room 		(turns light on)
+* Hey Cortana please turn red 			(blue green yellow purple) (switches ledstrip color)
+* Hey Cortana please light my desk 		(turns the desk light on)
+* Hey Cortana please i am going to sleep		(turns everything off)
+* Hey Cortana please i am Awake 			(turns the alarm off and lights on)
+* Hey Cortana please start gaming mode 		(turns the TV on and LED strip into red fading effect)
+* Hey Cortana please turn my screen on 		(turns the TV on)
 
 And many more!
 
