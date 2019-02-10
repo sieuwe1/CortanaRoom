@@ -10,12 +10,24 @@
 * Support for a Infrared sensor to turn lights on 
 * Soon availible in the windows store
 
-State of CortanRoom 2 is experimental
+State of CortanRoom 2 Very usable with some small bugs
 
-To use run cortanaroom 2 and go to settings an click the red circle by the connection tab to connect to the arduino. Automatic connecting still has to be added.
+Commands examples
+Hey Cortana please light my room 		(turns light on)
+Hey Cortana please turn red 			(blue green yellow purple) (switches ledstrip color)
+Hey Cortana please light my desk 		(turns the desk light on)
+Hey Cortana please i am going to sleep		(turns everything off)
+Hey Cortana please i am Awake 			(turns the alarm off and lights on)
+Hey Cortana please start gaming mode 		(turns the TV on and LED strip into red fading effect)
+Hey Cortana please turn my screen on 		(turns the TV on)
 
+And many more!
 
+All three LED strip effects are working
 
+The WakeUp alarm is now also working! Pick a time and press the red button. If it turns green the alarm is on. If the time selected is on the next day it wil st the alarm the next day by itself.
+
+Sensors are not working yet.
 
 ## open CortanaRoom 1 in vs 2015 to prevent errors!
 

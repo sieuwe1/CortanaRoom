@@ -62,6 +62,15 @@ namespace CoRGB
             string voiceCommandName = speechRecognitionResult.RulePath[0];
             switch (voiceCommandName)
             {
+
+                case "desk":
+                    Board.Instance.AllOff();
+                    Board.instance.ChangePinState(Setting.Instance.OfficeLightpin, 1);
+                    Setting.Instance.OfficeLightOn = true;
+                    Board.instance.ChangePinState(Setting.Instance.Officepin, 1);
+                    Setting.Instance.OfficeOn = true;
+                    break;
+
                 case "officelighton":
                     Board.instance.ChangePinState(Setting.Instance.OfficeLightpin,1);
                     Setting.Instance.OfficeLightOn = true;
@@ -71,19 +80,19 @@ namespace CoRGB
                     Setting.Instance.OfficeLightOn = false;
                     break;
                 case "mainlighton":
-                    Board.instance.ChangePinState(Setting.Instance.MainLightpin, 1);
+                    Board.instance.ChangePinState(Setting.Instance.MainLightpin, 0);
                     Setting.Instance.MainLightOn = true;
                     break;
                 case "mainlightoff":
-                    Board.instance.ChangePinState(Setting.Instance.MainLightpin, 0);
+                    Board.instance.ChangePinState(Setting.Instance.MainLightpin, 1);
                     Setting.Instance.MainLightOn = false;
                     break;
                 case "readinglighton":
-                    Board.instance.ChangePinState(Setting.Instance.ReadingLightpin, 1);
+                    Board.instance.ChangePinState(Setting.Instance.ReadingLightpin, 0);
                     Setting.Instance.ReadingLightOn = true;
                     break;
                 case "readinglightoff":
-                    Board.instance.ChangePinState(Setting.Instance.ReadingLightpin, 0);
+                    Board.instance.ChangePinState(Setting.Instance.ReadingLightpin, 1);
                     Setting.Instance.ReadingLightOn = false;
                     break;
                 case "officedeviceson":
@@ -99,44 +108,122 @@ namespace CoRGB
                     Setting.Instance.TVOn = true;
                     break;
                 case "TVOff":
-                    Board.instance.ChangePinState(Setting.Instance.TVpin, 0);
+                    Board.instance.ChangePinState(Setting.Instance.TVpin, 1);
                     Setting.Instance.TVOn = false;
                     break;
                 case "ledstripon":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(255, 255, 255);
                     Setting.Instance.LedColor = "White";
                     break;
                 case "ledstriponblue":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(0, 0, 255);
                     Setting.Instance.LedColor = "Blue";
                     break;
                 case "ledstriponred":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(255, 0, 0);
                     Setting.Instance.LedColor = "Red";
                     break;
                 case "ledstripongreen":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(0, 255, 0);
                     Setting.Instance.LedColor = "Green";
                     break;
                 case "ledstriponyellow":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(255, 0, 255);
                     Setting.Instance.LedColor = "Yellow";
                     break;
                 case "ledstriponcyan":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(0, 255, 255);
                     Setting.Instance.LedColor = "Cyan";
                     break;
                 case "ledstriponpurple":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(128, 0, 128);
                     Setting.Instance.LedColor = "Purple";
                     break;
+                case "ledstriponwhite":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
+                    Board.instance.WriteSmoothColor(255, 255, 255);
+                    Setting.Instance.LedColor = "White";
+                    break;
                 case "ledstripoff":
+                    Setting.Instance.FadeOn = false;
+                    Setting.Instance.FadeOneOn = false;
+                    Setting.Instance.FlashOn = false;
                     Board.instance.WriteSmoothColor(0, 0, 0);
                     Setting.Instance.LedColor = "blank";
                     break;
                 case "alloff":
                     Board.instance.AllOff();
                     break;
+                case "allon":
+                    Board.instance.AllOn();
+                    break;
+                case "Fade":
+                    Setting.Instance.FadeOn = true;
+                    Ledstrip.Fade();
+                    break;
+                case "Flash":
+                    Setting.Instance.FlashOn = true;
+                    Ledstrip.Flash();
+                    break;
+                case "FadeOne":
+                    Setting.Instance.FadeOneOn = true;
+                    Ledstrip.FadeOne();
+                    break;
+                case "Sleep":
+                    Board.Instance.AllOff();
+                    break;
+                case "Game":
+                    Setting.Instance.OfficeLightOn = true;
+                    Board.instance.ChangePinState(Setting.Instance.OfficeLightpin, 1);
+                    Setting.Instance.OfficeOn = true;
+                    Board.instance.ChangePinState(Setting.Instance.Officepin, 1);
+
+
+                    /*
+                    Board.Instance.AllOff();
+                    Setting.Instance.FadeOneOn = true;
+                    Setting.Instance.fadeOneColor = "Red";
+                    Ledstrip.FadeOne();
+                    Board.Instance.ChangePinState(Setting.Instance.TVpin, 0);
+                    */
+                    break;
+                case "Leaving":
+                    Board.Instance.AllOff();
+                    break;
+                case "AlarmOn":
+                    Setting.Instance.AlarmOn = true;
+                    break;
+                case "AlarmOff":
+                    Setting.Instance.AlarmOn = false;
+                    break;
+
+                case "morning":
+
+                    break; 
+
                 default:
                     break;
             }

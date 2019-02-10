@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace CoRGB
 {
@@ -36,14 +37,23 @@ namespace CoRGB
             String VID = Setting.Instance.VID;
             String PID = Setting.Instance.PID;
 
-            if (VID != null && PID != null)
+            if (VID != null && PID != null && !IsConnencion())
             {
+                
                     usb = new UsbSerial(VID, PID);
                     arduino = new RemoteDevice(usb);
                     usb.begin(57600, SerialConfig.SERIAL_8N1);
+
+                if (arduino == null)
+                {
+                    var box = new MessageDialog("No Arduino Connected or wrong PID and VID. Please check settings");
+                    box.ShowAsync();
+                }
+
+                }
             }
 
-        }
+        
 
         public void Disconnect()
         {
@@ -71,18 +81,18 @@ namespace CoRGB
         {
             for (int x =0; x < R; x++)
             {
-                arduino.analogWrite(Convert.ToByte(Setting.Instance.Rpin), (ushort)x);
-                await Delay(10);
+                    arduino.analogWrite(Convert.ToByte(Setting.Instance.Rpin), (ushort)x);
+                    await Delay(10);
             }
             for (int x=0; x < G; x++)
             {
-                arduino.analogWrite(Convert.ToByte(Setting.Instance.Gpin), (ushort)x);
-                await Delay(10);
+                    arduino.analogWrite(Convert.ToByte(Setting.Instance.Gpin), (ushort)x);
+                    await Delay(10);
             }
-            for (int x=0; x < B; x++)
+            for (int x = 0; x < B; x++)
             {
-                arduino.analogWrite(Convert.ToByte(Setting.Instance.Bpin), (ushort)x);
-                await Delay(10);
+                    arduino.analogWrite(Convert.ToByte(Setting.Instance.Bpin), (ushort)x);
+                    await Delay(10);
             }
         }
 
@@ -102,13 +112,18 @@ namespace CoRGB
 
         public void AllOff()
         {
-
+            /*
             for(int x = 1; x < 13; x++)
             {
                 ChangePinState(x, 0);
             }
-
-            WriteColor(0, 0, 0);
+            */
+                ChangePinState(Setting.Instance.MainLightpin, 1);
+                ChangePinState(Setting.Instance.ReadingLightpin, 1);
+                ChangePinState(Setting.Instance.OfficeLightpin, 0);
+                ChangePinState(Setting.Instance.TVpin, 1);
+                ChangePinState(Setting.Instance.Officepin,0);
+                WriteColor(0, 0, 0);
 
             Setting.Instance.MainLightOn = false;
             Setting.Instance.ReadingLightOn = false;
@@ -124,6 +139,38 @@ namespace CoRGB
             //voeg alles aan functie toe met ui updator
 
         }
+
+        public void AllOn()
+        {
+            /*
+            for(int x = 1; x < 13; x++)
+            {
+                ChangePinState(x, 0);
+            }
+            */
+            ChangePinState(Setting.Instance.MainLightpin, 0);
+            ChangePinState(Setting.Instance.ReadingLightpin, 0);
+            ChangePinState(Setting.Instance.OfficeLightpin, 1);
+            ChangePinState(Setting.Instance.TVpin, 0);
+            ChangePinState(Setting.Instance.Officepin, 1);
+            
+
+            Setting.Instance.MainLightOn = true;
+            Setting.Instance.ReadingLightOn = true;
+            Setting.Instance.OfficeLightOn = true;
+            Setting.Instance.OfficeOn = true;
+            Setting.Instance.TVOn = true;
+            Setting.Instance.LEDOn = true;
+            Setting.Instance.FlashOn = true;
+            Setting.Instance.FadeOn = true;
+            Setting.Instance.FadeOneOn = true;
+            Setting.Instance.LedColor = "White";
+            WriteSmoothColor(255, 255, 255);
+
+            //voeg alles aan functie toe met ui updator
+
+        }
+
 
         public async Task Delay(int DelayTime)
         {
@@ -144,5 +191,6 @@ namespace CoRGB
                 return true;
             }
         }
+
     }
 }

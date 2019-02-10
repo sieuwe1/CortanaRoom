@@ -9,6 +9,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,19 +28,36 @@ namespace CoRGB
     /// </summary>
     public sealed partial class MainPage : Page 
     {
-        Ledstrip l;
-        Sensor s;
+        //Sensor s;
         Alarm a;
+        private int count;
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            LoadDefaults();
-            l = new Ledstrip();
-            s = new Sensor();
-            a = new Alarm();
-            UiUpdater();
+            if (count == 0)
+            {
+                //startup code
+                LoadDefaults();
+
+                if (Setting.Instance.ReadSensorOn == true)
+                {
+                    //s = new Sensor();
+                }
+
+                Board.Instance.connect();
+                WriteDefaults();
+                a = new Alarm();
+                UiUpdater();
+
+                count++;
+            }
+            else
+            {
+                Board.Instance.connect();
+                a = new Alarm();
+            }
         }
 
         private void MainLight_Click(object sender, RoutedEventArgs e)
@@ -47,12 +65,12 @@ namespace CoRGB
 
             if (Setting.Instance.MainLightOn == false)
             {
-                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 1);
+                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 0); //doeterug
                 Setting.Instance.MainLightOn = true;
             }
             else
             {
-                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 0);
+                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 1);
                 Setting.Instance.MainLightOn = false;
             }
         }
@@ -75,12 +93,12 @@ namespace CoRGB
         {
             if (Setting.Instance.ReadingLightOn == false)
             {
-                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 1);
+                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 0); //doeterug
                 Setting.Instance.ReadingLightOn = true;
             }
             else
             {
-                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 0);
+                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 1);
                 Setting.Instance.ReadingLightOn = false;
             }
         }
@@ -89,12 +107,12 @@ namespace CoRGB
         {
             if (Setting.Instance.TVOn == false)
             {
-                Board.Instance.ChangePinState(Setting.Instance.TVpin, 1);
+                Board.Instance.ChangePinState(Setting.Instance.TVpin, 0);
                 Setting.Instance.TVOn = true;
             }
             else
             {
-                Board.Instance.ChangePinState(Setting.Instance.TVpin, 0);
+                Board.Instance.ChangePinState(Setting.Instance.TVpin, 1);
                 Setting.Instance.TVOn = false;
             }
         }
@@ -120,7 +138,7 @@ namespace CoRGB
                 Setting.Instance.flashColor = FlashColor.Text;
                 Setting.Instance.flashTime = Convert.ToInt32(FlashTime.Text);
                 Setting.Instance.FlashOn = true;
-                l.Flash();
+                Ledstrip.Flash();
             }
             else
             {
@@ -135,7 +153,7 @@ namespace CoRGB
                 Setting.Instance.fadeOneColor = FadeOneColor.Text;
                 Setting.Instance.fadeOneTime = Convert.ToInt32(FadeOneTime.Text);
                 Setting.Instance.FadeOneOn = true;
-                l.FadeOne();
+                Ledstrip.FadeOne();
             }
             else
             {
@@ -149,7 +167,7 @@ namespace CoRGB
             {
                 Setting.Instance.fadeTime = Convert.ToInt32(FadeTime.Text);
                 Setting.Instance.FadeOn = true;
-                l.Fade();
+                Ledstrip.Fade();
             }
             else
             {
@@ -164,24 +182,31 @@ namespace CoRGB
             switch (LedColor.Text)
             {
                 case "Red":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(255, 0, 0);
                     break;
                 case "Green":
-                     Board.Instance.WriteSmoothColor(0, 255, 0);
+                    Board.Instance.WriteColor(0, 0, 0);
+                    Board.Instance.WriteSmoothColor(0, 255, 0);
                     break;
                 case "Blue":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(0, 0, 255);
                     break;
                 case "Yellow":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(255, 255, 0);
                     break;
                 case "Purple":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(128, 0, 128);
                     break;
                 case "White":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(255, 255, 255);
                     break;
                 case "Cyan":
+                    Board.Instance.WriteColor(0, 0, 0);
                     Board.Instance.WriteSmoothColor(0, 255, 255);
                     break;
                 default:
@@ -199,9 +224,7 @@ namespace CoRGB
             FadeOneColor.Text = Setting.Instance.fadeOneColor;
             LedColor.Text = Setting.Instance.LedColor;
             AlarmPicker.Time = Setting.Instance.AlarmTime;
-
-
-
+            
             switch (Setting.Instance.LedColor)
             {
                 case "Red":
@@ -231,7 +254,94 @@ namespace CoRGB
             }
         }
 
+        private void WriteDefaults()
+        {
 
+            if (Setting.Instance.MainLightOn == false)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 1);
+            }
+            if (Setting.Instance.ReadingLightOn == false)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 1);
+            }
+            if (Setting.Instance.OfficeLightOn == false)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.OfficeLightpin, 0);
+            }
+            if (Setting.Instance.TVOn == false)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.TVpin, 1);
+            }
+            if (Setting.Instance.OfficeOn == false)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.Officepin ,0);
+            }
+            if (Setting.Instance.LedColor == "blank")
+            {
+                Board.Instance.WriteColor(0, 0, 0);
+            }
+            
+            //uipdate for on
+
+            if (Setting.Instance.MainLightOn == true)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.MainLightpin, 0);
+            }
+            if (Setting.Instance.ReadingLightOn == true)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.ReadingLightpin, 0);
+            }
+            if (Setting.Instance.OfficeLightOn == true)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.OfficeLightpin, 1);
+            }
+            if (Setting.Instance.TVOn == true)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.TVpin, 0);
+            }
+            if (Setting.Instance.OfficeOn == true)
+            {
+                Board.Instance.ChangePinState(Setting.Instance.Officepin, 1);
+            }
+            
+            switch(Setting.Instance.LedColor)
+            { 
+             case "Red":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(255, 0, 0);
+            break;
+                case "Green":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(0, 255, 0);
+            break;
+                case "Blue":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(0, 0, 255);
+            break;
+                case "Yellow":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(255, 255, 0);
+            break;
+                case "Purple":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(128, 0, 128);
+            break;
+                case "White":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(255, 255, 255);
+            break;
+                case "Cyan":
+                    Board.Instance.WriteColor(0, 0, 0);
+            Board.Instance.WriteSmoothColor(0, 255, 255);
+            break;
+            default:
+                    Board.Instance.WriteColor(0, 0, 0);
+            break;
+        }
+
+
+        }
 
 
         private Task UiUpdater()
@@ -414,5 +524,7 @@ namespace CoRGB
             }
            
         }
+
+       
     }
 }

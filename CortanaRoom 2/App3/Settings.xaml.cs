@@ -43,21 +43,11 @@ namespace CoRGB
 
         private void ConnectionOn_Click(object sender, RoutedEventArgs e)
         {
+            Setting.Instance.PID = PID.Text;
+            Setting.Instance.VID = VID.Text;
 
-            if(Board.instance.IsConnencion() == true)
-            {
-                Board.instance.Disconnect();
-                ConnectionStatus.Background = (SolidColorBrush)Resources["Red"];
-            }
-
-            else
-            {
-                Setting.Instance.PID = PID.Text;
-                Setting.Instance.VID = VID.Text;
-                Board.instance.connect();
-                ConnectionStatus.Background = (SolidColorBrush)Resources["Green"];
-            }
-
+            Board.instance.connect();
+            ConnectionStatus.Background = (SolidColorBrush)Resources["Green"];
         }
 
         private void ReadSensorOn_Click(object sender, RoutedEventArgs e)

@@ -31,12 +31,10 @@ namespace CoRGB
             alarm = alarm.Subtract(new TimeSpan(0, Setting.Instance.WakeUpTime, 0));
 
             TimeSpan diffrence = alarm.Subtract(now);
-            this.timer = new Timer(x =>
+            this.timer = new Timer(async x => 
             {
                 RiseSun();
                 timer.Dispose();
-                Setting.Instance.AlarmOn = false;
-
             }, null, diffrence, Timeout.InfiniteTimeSpan);
             
             System.Diagnostics.Debug.WriteLine(diffrence.ToString());
@@ -49,6 +47,7 @@ namespace CoRGB
             {
                 timer.Dispose();
             }
+            Setting.Instance.AlarmOn = false;
         }
 
         private async void RiseSun()
@@ -58,16 +57,21 @@ namespace CoRGB
 
             for (int red = 0; red < 255; red++)
             {
-                if (green < 100 && red > 10)
+                if (Setting.Instance.AlarmOn == true)
                 {
-                    green++;
-                    red++;
+
+                    if (green < 100 && red > 10)
+                    {
+                        green++;
+                        red++;
+                    }
+
+                    Board.Instance.WriteColor(red, green, 0);
+                    await Board.Instance.Delay(delay);
                 }
-
-                Board.Instance.WriteColor(red, green, 0);
-                await Board.Instance.Delay(delay);
-
             }
+
+            Setting.Instance.AlarmOn = false;
         }
     }
 }

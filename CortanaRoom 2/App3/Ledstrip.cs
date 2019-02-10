@@ -8,14 +8,11 @@ namespace CoRGB
 {
     class Ledstrip
     {
-
-        public Ledstrip()
-        {
-        }
-
         
-        public async void FadeOne()
+        public static async void FadeOne()
         {
+
+            Board.Instance.WriteColor(0, 0, 0);
 
             while (Setting.Instance.FadeOneOn == true)
             {
@@ -23,6 +20,7 @@ namespace CoRGB
                 {
                     if (Setting.Instance.FadeOneOn == false)
                     {
+                        Board.Instance.WriteColor(0, 0, 0);
                         return;
                     }
 
@@ -59,8 +57,9 @@ namespace CoRGB
 
                 for (ushort x = 255; x > 0; x--)
                 {
-                    if (Setting.Instance.FadeOn == false)
+                    if (Setting.Instance.FadeOneOn == false)
                     {
+                        Board.Instance.WriteColor(0, 0, 0);
                         return;
                     }
 
@@ -100,9 +99,9 @@ namespace CoRGB
 
         }
         
-        public async void Fade()
+        public static async void Fade()
         {
-
+            Board.Instance.WriteColor(0, 0, 0);
 
             while (Setting.Instance.FadeOn == true)
             {
@@ -124,6 +123,7 @@ namespace CoRGB
                         
                         if (Setting.Instance.FadeOn == false)
                         {
+                            Board.Instance.WriteColor(0,0,0);
                             return;
                         }
                         rgbColour[decColour] -= 1;
@@ -143,8 +143,10 @@ namespace CoRGB
 
         
 
-        public async void Flash()
+        public static async void Flash()
         {
+
+            Board.Instance.WriteColor(0, 0, 0);
 
             while (Setting.Instance.FlashOn == true)
             {
@@ -185,6 +187,9 @@ namespace CoRGB
                 await Board.Instance.Delay(Setting.Instance.flashTime);
 
                Board.Instance.WriteColor(0, 0, 0);
+
+                await Board.Instance.Delay(Setting.Instance.flashTime);
+
 
             }
         }

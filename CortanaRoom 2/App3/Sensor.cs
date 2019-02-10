@@ -9,11 +9,16 @@ namespace CoRGB
 {
     class Sensor 
     {
+
+        private int count;
+
         public Sensor()
         {
-
-            ReadSensor();
-
+            if (count == 0)
+            {
+                ReadSensor();
+                count++;
+            }
         }
 
         public Task ReadSensor()
