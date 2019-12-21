@@ -1,5 +1,7 @@
 # Use Cortana to control your lights, RGB ledstrips, devices and more with CortanaRoom!
 
+[![Demo](https://img.youtube.com/vi/38VDIR3he6g/0.jpg)](https://www.youtube.com/watch?v=38VDIR3he6g)
+
 
 ## CortanaRoom 2 now availible
 * RGB led strip effect support for fade, fade in one color and flash
